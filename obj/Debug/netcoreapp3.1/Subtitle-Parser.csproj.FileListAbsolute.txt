@@ -1,0 +1,12 @@
+/Users/bagjong-won/Desktop/Project/ToyProject/Subtitle-Parser/bin/Debug/netcoreapp3.1/Subtitle-Parser.deps.json
+/Users/bagjong-won/Desktop/Project/ToyProject/Subtitle-Parser/bin/Debug/netcoreapp3.1/Subtitle-Parser.runtimeconfig.json
+/Users/bagjong-won/Desktop/Project/ToyProject/Subtitle-Parser/bin/Debug/netcoreapp3.1/Subtitle-Parser.runtimeconfig.dev.json
+/Users/bagjong-won/Desktop/Project/ToyProject/Subtitle-Parser/bin/Debug/netcoreapp3.1/Subtitle-Parser.dll
+/Users/bagjong-won/Desktop/Project/ToyProject/Subtitle-Parser/bin/Debug/netcoreapp3.1/Subtitle-Parser.pdb
+/Users/bagjong-won/Desktop/Project/ToyProject/Subtitle-Parser/obj/Debug/netcoreapp3.1/Subtitle-Parser.csprojAssemblyReference.cache
+/Users/bagjong-won/Desktop/Project/ToyProject/Subtitle-Parser/obj/Debug/netcoreapp3.1/Subtitle-Parser.csproj.CoreCompileInputs.cache
+/Users/bagjong-won/Desktop/Project/ToyProject/Subtitle-Parser/obj/Debug/netcoreapp3.1/Subtitle-Parser.AssemblyInfoInputs.cache
+/Users/bagjong-won/Desktop/Project/ToyProject/Subtitle-Parser/obj/Debug/netcoreapp3.1/Subtitle-Parser.AssemblyInfo.cs
+/Users/bagjong-won/Desktop/Project/ToyProject/Subtitle-Parser/obj/Debug/netcoreapp3.1/Subtitle-Parser.dll
+/Users/bagjong-won/Desktop/Project/ToyProject/Subtitle-Parser/obj/Debug/netcoreapp3.1/Subtitle-Parser.pdb
+/Users/bagjong-won/Desktop/Project/ToyProject/Subtitle-Parser/obj/Debug/netcoreapp3.1/Subtitle-Parser.genruntimeconfig.cache
