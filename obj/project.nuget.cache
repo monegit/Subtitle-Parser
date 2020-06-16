@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BsHXq1GaEFV7PRWYkF2ZaM+VrSSxRDmOdfKrJ6pwBp59wpelseXNJeZeges9SMYSKA41XuMBNSgwLuuY88hq+Q==",
+  "dgSpecHash": "s2iDviNcnMWdWHT+bLccVpU45Qf3fVH42y29zIHegJWHEm1Yx4Je1xWnOtc6EOdpIzBCzAKjmDqGZBeOz864Yg==",
   "success": true,
-  "projectFilePath": "/Users/bagjong-won/Desktop/Project/ToyProject/Subtitle-Parser/Subtitle-Parser.csproj",
+  "projectFilePath": "/Users/bagjong-won/Desktop/Project/Subtitle-Parser/Subtitle-Parser.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

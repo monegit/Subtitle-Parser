@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bagjong-won/Desktop/Project/ToyProject/Subtitle-Parser/Subtitle-Parser.csproj",
+      "projectUniqueName": "/Users/bagjong-won/Desktop/Project/Subtitle-Parser/Subtitle-Parser.csproj",
       "projectName": "Subtitle-Parser",
-      "projectPath": "/Users/bagjong-won/Desktop/Project/ToyProject/Subtitle-Parser/Subtitle-Parser.csproj",
+      "projectPath": "/Users/bagjong-won/Desktop/Project/Subtitle-Parser/Subtitle-Parser.csproj",
       "packagesPath": "/Users/bagjong-won/.nuget/packages/",
-      "outputPath": "/Users/bagjong-won/Desktop/Project/ToyProject/Subtitle-Parser/obj/",
+      "outputPath": "/Users/bagjong-won/Desktop/Project/Subtitle-Parser/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
       }
     }
   }

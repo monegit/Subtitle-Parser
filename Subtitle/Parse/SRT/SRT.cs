@@ -1,6 +1,6 @@
 using System;
 
-namespace Subtitle.Parse
+namespace Subtitle.Parse.SRT
 {
     public class SRT
     {
