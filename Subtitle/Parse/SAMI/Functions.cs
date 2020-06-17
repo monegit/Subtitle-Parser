@@ -1,9 +1,10 @@
 using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace Subtitle_Parser.Subtitle.Parse.SAMI
+namespace Subtitle.Parse.SAMI
 {
-    public static class Remover
+    public static class Functions
     {
 
         public static string CommentRemove(this string content)
@@ -17,5 +18,16 @@ namespace Subtitle_Parser.Subtitle.Parse.SAMI
         {
             return content.Replace(Environment.NewLine, string.Empty);
         }
+
+        public static int GetSync(this string block)
+        {
+            return int.Parse(block.Split("sync:")[1].Split(",")[0]);
+        }
+
+        public static string GetContent(this string block)
+        {
+            return block.Split("content:")[1].Split(",")[0];
+        }
     }
+
 }

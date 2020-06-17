@@ -2,13 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Subtitle.Read;
-using Subtitle_Parser.Subtitle.Parse.SAMI;
 
 namespace Subtitle.Parse.SAMI
 {
     public class SAMI : ReadFile, IParse
     {
-        public string GetContent()
+        public string GetSubtitle()
         {
             return subtitleContent;
         }
@@ -18,11 +17,13 @@ namespace Subtitle.Parse.SAMI
             throw new NotImplementedException();
         }
 
-        public List<string> GetScriptList()
+        public List<string> GetScriptList
         {
-            return SyncBlock(
-                GetContent()
-            );
+            get{
+                return SyncBlock(
+                    GetSubtitle()
+                );
+            }
         }
 
         public void SetPath(string path)
@@ -32,9 +33,10 @@ namespace Subtitle.Parse.SAMI
 
         private List<string> SyncBlock(string content)
         {
-            var script = new List<string>();
+            List<string> script = new List<string>();
 
-            Regex regex = new Regex(@"<sync start=(?<sync>\d*)>\n*<p class=\w*>\n*(?<content>.*)",//@"[^<sync start=]+\d[^>]",
+            Regex regex = new Regex(
+                @"<sync start=(?<sync>\d*)>\n*<p class=\w*>\n*(?<content>.*)",
                 RegexOptions.Multiline |
                 RegexOptions.IgnoreCase);
 
@@ -43,7 +45,7 @@ namespace Subtitle.Parse.SAMI
             foreach (Match match in matches)
             {
                 GroupCollection groups = match.Groups;
-                script.Add(string.Format("sync: {0}, content: {1}", groups["sync"], groups["content"]));
+                script.Add(string.Format("sync:{0}, content:{1}", groups["sync"], groups["content"]));
             }
 
             return script;
