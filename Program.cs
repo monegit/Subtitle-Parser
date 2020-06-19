@@ -9,15 +9,14 @@ namespace Subtitle_Parser
     {
         static void Main(string[] args)
         {
-            IParse smi = new SAMI();
-            smi.SetPath("/Users/bagjong-won/Downloads/귀멸의 칼날 skip ver/[HorribleSubs] Kimetsu no Yaiba - 02 [1080p].smi");
+            IParse subtitle = new SAMI("sample/smi.smi");
 
-            for (int i = 0; i<=smi.GetScriptList.Count - 1; i++)
+            for (int i = 0; i<=10; i++)
             {
                 Console.WriteLine(
                     string.Format("{0}, {1}",
-                    smi.GetScriptList[i].GetSync(),
-                    smi.GetScriptList[i].GetContent()));
+                    subtitle.GetScriptList[i].GetSync(),
+                    subtitle.GetScriptList[i].GetContent()));
             }
         }
         

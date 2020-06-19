@@ -2,11 +2,39 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Subtitle.Read;
+using Subtitle.Parse.SAMI;
+using System.IO;
 
 namespace Subtitle.Parse.SAMI
 {
     public class SAMI : ReadFile, IParse
     {
+        public SAMI(string path)
+        {
+            string extension = SimpleExtension(Path.GetExtension(path));
+
+            if (IsSAMI(path))
+                SetPath(path);
+            else
+                throw new FileLoadException(
+                    $"The {extension.ToUpper()} extension does not match the SAMI format."
+                );
+
+            bool IsSAMI(string path)
+            {
+                switch (extension)
+                {
+                    case "sami":
+                    case "smi":
+                        return true;
+                    default:
+                        return false;
+                }
+            }
+
+            string SimpleExtension(string path) => path.Replace(".", string.Empty);
+        }
+
         public string GetSubtitle()
         {
             return subtitleContent;
@@ -20,9 +48,7 @@ namespace Subtitle.Parse.SAMI
         public List<string> GetScriptList
         {
             get{
-                return SyncBlock(
-                    GetSubtitle()
-                );
+                return SyncBlock(GetSubtitle());
             }
         }
 

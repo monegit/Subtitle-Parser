@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text.RegularExpressions;
 
 namespace Subtitle.Parse.SAMI
@@ -19,7 +20,7 @@ namespace Subtitle.Parse.SAMI
             return content.Replace(Environment.NewLine, string.Empty);
         }
 
-        public static int GetSync(this string block)
+        internal static int GetSync(this string block)
         {
             return int.Parse(block.Split("sync:")[1].Split(",")[0]);
         }
@@ -29,5 +30,4 @@ namespace Subtitle.Parse.SAMI
             return block.Split("content:")[1].Split(",")[0];
         }
     }
-
 }
