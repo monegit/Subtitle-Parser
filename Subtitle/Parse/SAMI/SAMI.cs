@@ -45,7 +45,7 @@ namespace Subtitle.Parse.SAMI
             throw new NotImplementedException();
         }
 
-        public List<string> GetScriptList
+        public List<string> GetCommentList
         {
             get{
                 return SyncBlock(GetSubtitle());
