@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
+using Subtitle_Parser.Subtitle.Parse.SAMI;
 
 namespace Subtitle.Parse.SAMI
 {
     public static class Functions
     {
-
         public static string CommentRemove(this string content)
         {
             Regex regex = new Regex(@"<(!?)--(\n?)(.*?)(\n?)-->");
@@ -25,9 +25,9 @@ namespace Subtitle.Parse.SAMI
             return int.Parse(block.Split("sync:")[1].Split(",")[0]);
         }
 
-        public static string GetContent(this string block)
+        public static string GetComment(this string block)
         {
-            return block.Split("content:")[1].Split(",")[0];
+            return block.Split($"{Token.comment}:")[1].Split(",")[0];
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Subtitle_Parser
                 Console.WriteLine(
                     string.Format("{0}, {1}",
                     subtitle.GetCommentList[i].GetSync(),
-                    subtitle.GetCommentList[i].GetContent()));
+                    subtitle.GetCommentList[i].GetComment()));
             }
         }
         

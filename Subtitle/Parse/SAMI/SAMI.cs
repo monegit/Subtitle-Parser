@@ -4,6 +4,8 @@ using System.Text.RegularExpressions;
 using Subtitle.Read;
 using Subtitle.Parse.SAMI;
 using System.IO;
+using Subtitle_Parser.Subtitle.Parse.SAMI;
+using System.Linq;
 
 namespace Subtitle.Parse.SAMI
 {
@@ -22,14 +24,10 @@ namespace Subtitle.Parse.SAMI
 
             bool IsSAMI(string path)
             {
-                switch (extension)
-                {
-                    case "sami":
-                    case "smi":
-                        return true;
-                    default:
-                        return false;
-                }
+                if (Token.extension.Contains(extension.ToLower()))
+                    return true;
+                else
+                    return false;
             }
 
             string SimpleExtension(string path) => path.Replace(".", string.Empty);
@@ -40,7 +38,7 @@ namespace Subtitle.Parse.SAMI
             return subtitleContent;
         }
 
-        public string GetScript(int time)
+        public string GetComment(int time)
         {
             throw new NotImplementedException();
         }
@@ -62,7 +60,7 @@ namespace Subtitle.Parse.SAMI
             List<string> script = new List<string>();
 
             Regex regex = new Regex(
-                @"<sync start=(?<sync>\d*)>\n*<p class=\w*>\n*(?<content>.*)",
+                @"<sync start=(?<sync>\d*)>\n*<p class=\w*>\n*(?<comment>.*)",
                 RegexOptions.Multiline |
                 RegexOptions.IgnoreCase);
 
@@ -71,7 +69,11 @@ namespace Subtitle.Parse.SAMI
             foreach (Match match in matches)
             {
                 GroupCollection groups = match.Groups;
-                script.Add(string.Format("sync:{0}, content:{1}", groups["sync"], groups["content"]));
+                string sync = Token.sync;
+                string comment = Token.comment;
+
+                script.Add(
+                    $"{ sync }:{ groups[sync] },{ comment }:{ groups[comment] }");
             }
 
             return script;
