@@ -1,4 +1,4 @@
-namespace Subtitle_Parser.Subtitle.Parse.SAMI
+namespace Subtitle.Parse.SAMI
 {
     internal class Token
     {

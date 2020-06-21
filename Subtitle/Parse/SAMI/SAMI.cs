@@ -4,7 +4,6 @@ using System.Text.RegularExpressions;
 using Subtitle.Read;
 using Subtitle.Parse.SAMI;
 using System.IO;
-using Subtitle_Parser.Subtitle.Parse.SAMI;
 using System.Linq;
 
 namespace Subtitle.Parse.SAMI

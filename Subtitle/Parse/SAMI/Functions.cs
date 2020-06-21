@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
-using Subtitle_Parser.Subtitle.Parse.SAMI;
+using Subtitle.Parse.SAMI;
 
 namespace Subtitle.Parse.SAMI
 {
