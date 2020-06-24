@@ -20,6 +20,5 @@ namespace Subtitle_Parser
                     subtitle.GetCommentList[i].GetComment()));
             }
         }
-        
     }
 }

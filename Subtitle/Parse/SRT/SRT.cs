@@ -56,6 +56,7 @@ namespace Subtitle.Parse.SRT
         {
             var script = new List<string>();
             var builder = new StringBuilder();
+            
             string session = Token.Session;
             string start = Token.SyncStart;
             string end = Token.SyncEnd;

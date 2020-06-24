@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Subtitle.Read;
-using Subtitle.Parse.SAMI;
 using System.IO;
 using System.Linq;
 
@@ -56,7 +55,7 @@ namespace Subtitle.Parse.SAMI
 
         private List<string> SyncBlock(string content)
         {
-            List<string> script = new List<string>();
+            var script = new List<string>();
 
             Regex regex = new Regex(
                 @"<sync start=(?<sync>\d*)>\n*<p class=\w*>\n*(?<comment>.*)",
